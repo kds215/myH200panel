@@ -24,8 +24,9 @@ Clear buttons work as advertised, BOOT and INSTR are NOPs (NoOperation) for now.
 ADDR MODE (2+3) have no effect as no Easycoder program is actually running.
 
 Sense Switch#1 ON & RUN button triggers Clear-Memory button flashing effect.
-Sense Switch#2 
+Sense Switch#2 NOP.
 Sense Switch#3 ON logs runtime comments to javascript console.
 Sense Switch#4 ON shows info section with table of octal/decimal display values.
 
+Look-see at
 ![myH200panel]https://raw.githubusercontent.com/kds215/myH200panel/master/docs/H200TestRun.jpg?token=AHB65GOUBB5M2S5F3VDQ4VK5QFVSY
