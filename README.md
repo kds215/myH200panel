@@ -29,4 +29,4 @@ Sense Switch#3 ON logs runtime comments to javascript console.
 Sense Switch#4 ON shows info section with table of octal/decimal display values.
 
 Look-see at
-![myH200panel]https://raw.githubusercontent.com/kds215/myH200panel/master/docs/H200TestRun.jpg?token=AHB65GOUBB5M2S5F3VDQ4VK5QFVSY
+![myH200panel]https://github.com/kds215/myH200panel/blob/master/docs/H200TestRun.jpg
