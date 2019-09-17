@@ -6,8 +6,9 @@ and allowing for human operator interaction with system operations.
 
 The H200 control panel was an integral part of the central processor,
 containing control buttons for human operators to stop/start/load/interrogate
-program instructions. The Honeywell 200 system main memory speed was 2 microseconds
-per character (byte) with a 65K max memory capacity.
+program instructions. The Honeywell H200 series was introducted 1962 and 
+superseded in 1972 with the H2000 series. The H200 system main memory speed 
+was 2 microseconds per character (byte) with a 65K max memory capacity.
 
 This simple javascript-html-based Honeywell H200 control panel simulator emulates
 flickering lights while pretending to run Clear-Memory program on the H200 console.
@@ -19,7 +20,7 @@ Users can access individual octal addresses, deposit octal byte code into conten
 item and/or word marks and deposit this content at selected address.
 Addresses can be deposited/recalled into 15 (17octal) registers.
 
-Clear buttons work as advertised, BOOT and INSTR are NOPs (No Operation).
+Clear buttons work as advertised, BOOT and INSTR are NOPs (NoOperation) for now.
 ADDR MODE (2+3) have no effect as no Easycoder program is actually running.
 
 Sense Switch#1 ON & RUN button triggers Clear-Memory button flashing effect.
