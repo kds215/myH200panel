@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>Honeywell 200</title>
+
+    <script type="text/javascript" src='bin/jquery-3.4.1.min.js'></script>
+    <script type="text/javascript" src='bin/myH200-7.js'></script>
+    
+    <link rel="stylesheet" type="text/css" href='css/myStyles.css' />
+
+</head>
+
+<body>
+
+    <!-- (H200 32K max @ 2 microsec 10^-6)  -->
+    <h2 align="center" style='font-family: "impact";'>H200 Console</h2>
+    <h2 align="center" style='font-family: "impact";'>Access Core Memory</h2>
+
+<table id="h200" class="tblbasics" border align="center"
+  bordercolordark="#000000" bordercolorlight="#000000"
+  cellpadding="0" cellspacing="0">
+    <tr>
+    <td>
+        
+<!-- Left Side Console Panel -->
+
+    <table id="h2l" width="1175">
+        <tr id="l1" height="29" class="ConL01">
+            <td>&nbsp;</td>
+            <td width="124" align="center">
+                Clear
+            </td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124" align="right">
+                Item&nbsp;&nbsp;&nbsp;&nbsp;Word&nbsp;&nbsp;
+            </td>
+            <td width="124" align="center">
+                4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </td>
+            <td width="124" align="center">
+    4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+
+        <!--  CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS -->
+
+        <tr id="l2" height="57" class="ConL02">
+            <td>&nbsp;&nbsp;&nbsp;CONTENTS</td>
+            <td width="124" align="center">
+                <img id="idCntsClear" src="img/bClearOFF.png"
+                    onMouseDown='pShow1s(this.id)' onMouseUp='pClear(this.id)'
+                    onMouseOut='putImage(this.id, "img/bClearOFF.png")'>
+            </td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td id="idc300" width="124" height="57" align="right">
+                <img id="idCnts200" class="blk0" src="img/bSemiOFF.png" onClick='pContents(this.id)'>
+                <img id="idCnts100" class="blk0" src="img/bCommaOFF.png" onClick='pContents(this.id)'>
+            </td>
+            <td id="idc70" width="124" height="57" align="right">
+                <img id="idCnts40" class="blk0" src="img/bOFF.png" onClick='pContents(this.id)'>
+                <img id="idCnts20" class="blk0" src="img/bOFF.png" onClick='pContents(this.id)'>
+                <img id="idCnts10" class="blk0" src="img/bOFF.png" onClick='pContents(this.id)'>
+            </td>
+            <td id="idc7" width="124" height="57" align="right">
+                <img id="idCnts4" class="blk0" src="img/bOFF.png" onClick='pContents(this.id)'>
+                <img id="idCnts2" class="blk0" src="img/bOFF.png" onClick='pContents(this.id)'>
+                <img id="idCnts1" class="blk0" src="img/bOFF.png" onClick='pContents(this.id)'>
+            </td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+        <tr id="l3" height="29" class="ConL01">
+            <td>&nbsp;</td>
+            <td width="124" align="center">
+                Clear
+            </td>
+            <td width="124">&nbsp;</td>
+            <td width="124" align="center">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </td>
+            <td width="124" align="center">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </td>
+            <td width="124" align="center">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </td>
+            <td width="124" align="center">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </td>
+            <td width="124" align="center">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+
+        <!-- ADDRESS ADDRESS ADDRESS ADDRESS ADDRESS ADDRESS ADDRESS ADDRESS -->
+
+        <tr id="l4" height="57" class="ConL02">
+            <td>&nbsp;&nbsp;&nbsp;ADDRESS</td>
+            <td width="124" align="center">
+                <img id="idAddrClear" src="img/bClearOFF.png"
+                    onMouseDown='pShow1s(this.id)' onMouseUp='pClear(this.id)'
+                    onMouseOut='putImage(this.id, "img/bClearOFF.png")'>
+            </td>
+            <td width="124" align="right">
+                <!-- these buttons are not addressable on H200, memory limit is 32K -->
+                <img src="img/bPlaceholder.png">
+                <img src="img/bPlaceholder.png">
+            </td>
+            <td id="idAddr70000" width="124" align="right">
+                <img id="idAddr40000" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr20000" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr10000" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+            </td>
+            <td id="idAddr7000" width="124" align="right">
+                <img id="idAddr4000" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr2000" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr1000" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+            </td>
+            <td  id="idAddr700" width="124" align="right">
+                <img id="idAddr400" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr200" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr100" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+            </td>
+            <td  id="idAddr70" width="124" align="right">
+                <img id="idAddr40" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr20" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr10" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+            </td>
+            <td  id="idAddr7" width="124" align="right">
+                <img id="idAddr4" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr2" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+                <img id="idAddr1" class="blk0" src="img/bOFF.png" onClick='pAddr(this.id)'>
+            </td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+        <tr id="l5" height="29" class="ConL01">
+            <td>&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124" align="right">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td width="124" align="center">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+
+        <!-- CONTROL CONTROL CONTROL CONTROL CONTROL CONTROL CONTROL CONTROL -->
+
+        <tr id="l6" height="57" class="ConL02">
+            <td>&nbsp;&nbsp;&nbsp;CONTROL</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124">&nbsp;</td>
+            <td width="124" align="right">
+                <img src="img/bPlaceholder.png">
+                <img src="img/bPlaceholder.png">
+                <img id="idCReg10" src="img/bOFF.png" onClick='pControl(this.id)'>
+            </td>
+            <td width="124" align="right">
+                <img id="idCReg4" src="img/bOFF.png" onClick='pControl(this.id)'>
+                <img id="idCReg2" src="img/bOFF.png" onClick='pControl(this.id)'>
+                <img id="idCReg1" src="img/bOFF.png" onClick='pControl(this.id)'>
+            </td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+
+        <!-- POWER BUTTONS etc POWER BUTTONS etc POWER BUTTONS etc POWER BUTTONS etc -->
+
+        <tr id="l7" height="29" class="ConL01">
+            <td align="left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AC&nbsp;ON&nbsp;&nbsp;&nbsp;AC&nbsp;OFF&nbsp;&nbsp;DC&nbsp;ON&nbsp;&nbsp;DC&nbsp;OFF&nbsp;&nbsp;
+            </td>
+            <td colspan="2" align="right">
+&nbsp;STOP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOOT&nbsp;&nbsp;&nbsp;&nbsp;CLEAR&nbsp;&nbsp;&nbsp;&nbsp;INSTR&nbsp;&nbsp;&nbsp;&nbsp;RUN&nbsp;&nbsp;&nbsp;
+            </td>
+            <td colspan="2" align="right">
+ADDR&nbsp;MODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td colspan="3">&nbsp;</td>
+            <td>&nbsp;&nbsp;</td>
+        </tr>
+        <tr id="l8" height="57" class="ConL01">
+            <td class="bottom">&nbsp;&nbsp;&nbsp;
+                <img id="idACON" src="img/bGreenON.png" onClick='pACon()'>
+                <img id="idACOFF" src="img/bRedOFF.png" onClick='pACoff()'>
+                <img id="idDCON" src="img/bGreenON.png">
+                <img id="idDCOFF" src="img/bOFF.png">
+            </td>
+            <td colspan="2" width="246" align="right" class="bottom">
+                
+                <img id="idStop" src="img/bRedON.png" 
+                     onClick='pStop(this.id,"img/bRedON.png")'>
+                
+                <img id="idInit" src="img/bInitOFF.png" 
+                     onClick='putImage(this.id, "img/bInitON.png"); pInitRandomValues();'
+                     onMouseOut='putImage(this.id, "img/bInitOFF.png")'>
+
+                <img id="idBoot" src="img/bBootOFF.png">
+
+                <img id="idSysClear" src="img/bClearOFF.png" 
+                     onMouseDown='pShow1s(this.id)' onMouseUp='pClear(this.id)'
+                     onMouseOut='putImage(this.id, "img/bClearOFF.png")'>
+
+                <img id="idInstruct" src="img/bInstructOFF.png">
+                
+                <img id="idRun" src="img/bRunOFF.png"
+                     onMouseDown='putImage(this.id, "img/bRunON.png")'
+                     onMouseUp='putImage(this.id, "img/bRunOFF.png")'
+                     onMouseOut='putImage(this.id, "img/bRunOFF.png")'
+                     onClick='pRun(this.id,"img/bRunON.png")'>
+                
+            </td>
+            <td colspan="2" width="246" align="right" class="bottom">
+                <img id="idMode2" src="img/b2ON.png" onClick='pMode2()'>
+                <img id="idMode3" src="img/b3OFF.png" onClick='pMode3()'>
+                <img src="img/bPlaceholder.png" onClick='infoMode4()'>
+            </td>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr id="l9" height="67" class="ConL03">
+            <td colspan="3" align="right">H O N E Y W E L L&nbsp;&nbsp;&nbsp;2 0 0</td>
+            <td colspan="6">&nbsp;</td>
+        </tr>
+    </table>
+        
+    </td>
+        
+    <td>
+        
+    <!-- Right Side of Console Panel - Right Side of Console - Panel Right Side of Console Panel -->
+
+    <table id="h2r" width="215">
+        <tr id="r1" height="29" class="ConR01">
+            <td>&nbsp;</td>
+        </tr>
+        <tr id="r2" height="33" class="ConR02">
+            <td class="bottom" align="center">
+DISPLAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENTER
+            </td>
+        </tr>
+        <tr id="r3" height="57" class="ConR01">
+            <td align="center">
+                <img id="idDispAddrCnts" src="img/bUpOFF.png"
+                     onClick='putImage(this.id, "img/bUpON.png"); pDispAddrContent();'
+                     onMouseOut='putImage(this.id, "img/bUpOFF.png")'>
+                <img src="img/bPlaceholder.png">
+                <img src="img/bPlaceholder.png">
+                <img id="idEnterAddrCnts" src="img/bDownOFF.png"
+                     onClick='putImage(this.id, "img/bDownON.png"); pEnterAddrContent();'
+                     onMouseOut='putImage(this.id, "img/bDownOFF.png")'>
+            </td>
+        </tr>
+        <tr id="r4" height="33" class="ConR02">
+            <td>&nbsp;</td>
+        </tr>
+        <tr id="r5" height="57" class="ConR01">
+            <td align="center">
+                <img id="idDispRegAddr" src="img/bUpOFF.png"
+                     onClick='putImage(this.id, "img/bUpON.png"); pDispRegAddrContent();'
+                     onMouseOut='putImage(this.id, "img/bUpOFF.png")'>
+                <img id="idDispAddrPlus1" src="img/bUp+1OFF.png"
+                     onClick='putImage(this.id, "img/bUp+1ON.png"); pDispAddrPlus1();'
+                     onMouseOut='putImage(this.id, "img/bUp+1OFF.png")'>
+                <img id="idDispAddrMinus1" src="img/bUP-1OFF.png"
+                     onClick='putImage(this.id, "img/bUp-1ON.png"); pDispAddrMinus1();'
+                     onMouseOut='putImage(this.id, "img/bUp-1OFF.png")'>
+                <img id="idEnterRegAddr" src="img/bDownOFF.png"
+                     onClick='putImage(this.id, "img/bDownON.png"); pEnterRegAddr();'
+                     onMouseOut='putImage(this.id, "img/bDownOFF.png")'>
+            </td>
+        </tr>
+        <tr id="r6" height="49" class="ConR02">
+            <td class="bottom" align="center">
+                Sense Switches
+            </td>
+        </tr>
+        <tr id="r7" height="29" class="ConR02">
+            <td align="center" class="bottom">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;
+            </td>
+        </tr>
+        <tr id="r8" height="57" class="ConR02">
+            <td align="center" class="bottom">
+                <img id="idSense4" src="img/bOFF.png" 
+                     onClick='pSense(this.id)' onMouseOver="showInfo(this.id)"
+                     onMouseOut="clearInfo(this.id)">
+                <img id="idSense3" src="img/bOFF.png" 
+                     onClick='pSense(this.id)' onMouseOver="showInfo(this.id)"
+                     onMouseOut="clearInfo(this.id)">
+                <img id="idSense2" src="img/bOFF.png" 
+                     onClick='pSense(this.id)'>
+                <img id="idSense1" src="img/bOFF.png" 
+                     onClick='pSense(this.id)' onMouseOver="showInfo(this.id)"
+                     onMouseOut="clearInfo(this.id)">
+            </td>
+        </tr>
+        <tr id="r9" height="67" class="ConR03">
+            <td align="center" class="top">
+                <div id="infoSense" style="display: none">&nbsp;</div>
+            </td>
+        </tr>
+    </table>
+        
+    </td>
+        
+    </tr>
+</table>
+
+<p class="FOOTER">&nbsp;</p>
+
+<div id="infoSection" style="visibility: hidden" align="center">
+
+     <table style="border:1px solid gray" class="ConL01">
+         <tr>
+            <td width="150">
+                <div id="revision" class="FOOTER"></div>
+            </td>
+            <th align="center" width="150">
+                Octal
+            </th>
+             <th align="center" width="150">
+                 Decimal
+             </th>
+         </tr>
+
+         <tr>
+             <th align="center">Contents</th>
+             <td align="right">
+                 <div id="ContentsOctalValue">0</div>
+             </td>
+             <td align="right">
+                 <div id="ContentsDecimalValue">0</div>
+             </td>
+         </tr>
+
+         <tr>
+             <th align="center">Address</th>
+             <td align="right">
+                 <div id="AddressOctalValue">0</div>
+             </td>
+             <td align="right">
+                 <div id="AddressDecimalValue">0</div>
+             </td>
+         </tr>
+
+         <tr>
+             <th align="center">Control</th>
+             <td align="right">
+                 <div id="ControlOctalValue">0</div>
+             </td>
+             <td align="right">
+                 <div id="ControlDecimalValue">0</div>
+             </td>
+         </tr>
+
+     </table>
+
+    <p>
+         <img src="img/H200c.jpg" style="border:1px solid black">
+     </p>
+
+     <p class="FOOTER">
+         <img src="img/h-200.jpg" style="border:1px solid black"><br>
+         <a href="http://www.feb-patrimoine.com/projet/honeywell200/h-200.htm" target="_blank">
+        See Original http://www.feb-patrimoine.com/projet/honeywell200/h-200.htm</a>
+     </p>
+
+</div>
+
+</body>
+</html>
