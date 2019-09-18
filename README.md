@@ -1,5 +1,9 @@
 # myH200panel
-Honeywell 200 Control Panel Simulation
+Honeywell 200 Control Panel Simulation in HTML-Javascript.
+
+Download dirs and load H200.htm in Chrome, FireFox or Safari, no need for web server environment.
+The docs directory is the largest with 30Mb, it holds pdfs of old manuals and is not needed at runtime.
+All files are roughly 500k without the docs directory.
 
 The H200 console was the operator control panel to display H200 system status
 and allowing for human operator interaction with system operations.
@@ -17,12 +21,12 @@ The Clear-Memory-Run effect is launched when setting Sense Switch#1 and pushing 
 and ends when hitting the STOP button to reset the H200 panel.
 
 Users can access individual octal addresses, deposit octal byte code into content with
-item and/or word marks and deposit this content at selected address.
+item and/or word marks and deposit this content at a selected address.
 Addresses can be deposited/recalled into 15 (17octal) registers.
 
 CLEAR buttons work as advertised, BOOTstrap and INSTR are NOPs (NoOperation) for now.
 The INITialize! button, normally used to clear registers before any BOOTstrap,
-is now used to randomly initializes registers and addresses with random content.
+is now used to randomly initialize registers and addresses with random content.
 The ADDRess MODE (2+3) has no effect as no Easycoder program is actually running.
 
 Sense Switch#1 ON & RUN button triggers Clear-Memory button flashing effect.
