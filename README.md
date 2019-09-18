@@ -20,14 +20,15 @@ Users can access individual octal addresses, deposit octal byte code into conten
 item and/or word marks and deposit this content at selected address.
 Addresses can be deposited/recalled into 15 (17octal) registers.
 
-Clear buttons work as advertised, BOOT and INSTR are NOPs (NoOperation) for now.
-ADDR MODE (2+3) have no effect as no Easycoder program is actually running.
+CLEAR buttons work as advertised, BOOTstrap and INSTR are NOPs (NoOperation) for now.
+The INITialize! button, normally used to clear registers before any BOOTstrap,
+is now used to randomly initializes registers and addresses with random content.
+The ADDRess MODE (2+3) has no effect as no Easycoder program is actually running.
 
 Sense Switch#1 ON & RUN button triggers Clear-Memory button flashing effect.
 Sense Switch#2 NOP.
 Sense Switch#3 ON logs runtime comments to javascript console.
 Sense Switch#4 ON shows info section with table of octal/decimal display values.
 
-Look-see at
 <img src="https://github.com/kds215/myH200panel/blob/master/docs/H200TestRun.jpg" alt="myH200panel" />
-# [myH200panel]https://github.com/kds215/myH200panel/blob/master/docs/H200TestRun.jpg
+
