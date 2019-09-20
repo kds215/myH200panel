@@ -15,6 +15,7 @@ containing control buttons for human operators to stop/start/load/interrogate
 program instructions. The Honeywell H200 series was introducted 1962 and 
 superseded in 1972 with the H2000 series. The H200 system main memory speed 
 was 2 microseconds per character (byte) with a 65K max memory capacity.
+This panel can simulate 32K byte addresses (32767) => 77777octal.
 
 This simple javascript-html-based Honeywell H200 control panel simulator emulates
 flickering lights while pretending to run Clear-Memory program on the H200 console.
