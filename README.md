@@ -31,10 +31,11 @@ The INITialize! button, normally used to clear registers before any BOOTstrap,
 is now used to randomly initialize registers and addresses with random content.
 The ADDRess MODE (2+3) has no effect as no Easycoder program is actually running.
 
-Sense Switch#1 ON & RUN button triggers Clear-Memory button flashing effect.
-Sense Switch#2 NOP.
-Sense Switch#3 ON logs runtime comments to javascript console.
-Sense Switch#4 ON shows info section with table of octal/decimal display values.
+Sense Switch#1 ON & RUN button triggers Clear-Memory button flashing effect.<br/>
+Sense Switch#2 NOP.<br/>
+Sense Switch#3 ON logs runtime comments to javascript console.<br/>
+Sense Switch#4 ON shows info section with table of octal/decimal display values.<br/>
+
 
 
 
