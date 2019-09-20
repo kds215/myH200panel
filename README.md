@@ -1,4 +1,6 @@
 # myH200panel
+<img src="https://github.com/kds215/myH200panel/blob/master/docs/H200TestRun.jpg" alt="myH200panel" />
+
 Honeywell 200 Control Panel Simulation in HTML-Javascript.
 
 Download dirs and load H200.htm in Chrome, FireFox or Safari, no need for web server environment.
@@ -34,5 +36,5 @@ Sense Switch#2 NOP.
 Sense Switch#3 ON logs runtime comments to javascript console.
 Sense Switch#4 ON shows info section with table of octal/decimal display values.
 
-<img src="https://github.com/kds215/myH200panel/blob/master/docs/H200TestRun.jpg" alt="myH200panel" />
+
 
