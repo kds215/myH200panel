@@ -25,7 +25,7 @@ and ends when hitting the STOP button to reset the H200 panel.
 
 Users can access individual octal addresses, deposit octal byte code into content with
 item and/or word marks and deposit this content at a selected address.
-Addresses can be deposited/recalled into 15 (17octal) registers.
+Addresses can be deposited into or recalled from 15 (17octal) registers.
 
 CLEAR buttons work as advertised, BOOTstrap and INSTR are NOPs (NoOperation) for now.
 The INITialize! button, normally used to clear registers before any BOOTstrap,
