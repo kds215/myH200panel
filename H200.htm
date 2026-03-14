@@ -5,8 +5,8 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Honeywell 200</title>
 
-    <script type="text/javascript" src='bin/jquery-3.4.1.min.js'></script>
-    <script type="text/javascript" src='bin/myH200-7.js'></script>
+    <script type="text/javascript" src='bin/jquery-4.0.0.min.js'></script>
+    <script type="text/javascript" src='bin/myH200-8.js'></script>
     
     <link rel="stylesheet" type="text/css" href='css/myStyles.css' />
 
@@ -213,7 +213,7 @@ ADDR&nbsp;MODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      onClick='pStop(this.id,"img/bRedON.png")'>
                 
                 <img id="idInit" src="img/bInitOFF.png" 
-                     onClick='putImage(this.id, "img/bInitON.png"); pInitRandomValues();'
+                     onClick='pInit(this.id, "img/bInitON.png")'
                      onMouseOut='putImage(this.id, "img/bInitOFF.png")'>
 
                 <img id="idBoot" src="img/bBootOFF.png">
@@ -225,7 +225,6 @@ ADDR&nbsp;MODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <img id="idInstruct" src="img/bInstructOFF.png">
                 
                 <img id="idRun" src="img/bRunOFF.png"
-                     onMouseDown='putImage(this.id, "img/bRunON.png")'
                      onMouseUp='putImage(this.id, "img/bRunOFF.png")'
                      onMouseOut='putImage(this.id, "img/bRunOFF.png")'
                      onClick='pRun(this.id,"img/bRunON.png")'>
@@ -234,7 +233,7 @@ ADDR&nbsp;MODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <td colspan="2" width="246" align="right" class="bottom">
                 <img id="idMode2" src="img/b2ON.png" onClick='pMode2()'>
                 <img id="idMode3" src="img/b3OFF.png" onClick='pMode3()'>
-                <img src="img/bPlaceholder.png" onClick='infoMode4()'>
+                <img src="img/bPlaceholder.png">
             </td>
             <td colspan="4">&nbsp;</td>
         </tr>
@@ -262,12 +261,12 @@ DISPLAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
         <tr id="r3" height="57" class="ConR01">
             <td align="center">
                 <img id="idDispAddrCnts" src="img/bUpOFF.png"
-                     onClick='putImage(this.id, "img/bUpON.png"); pDispAddrContent();'
+                     onClick='pDispAddrContent(this.id, "img/bUpON.png")'
                      onMouseOut='putImage(this.id, "img/bUpOFF.png")'>
                 <img src="img/bPlaceholder.png">
                 <img src="img/bPlaceholder.png">
                 <img id="idEnterAddrCnts" src="img/bDownOFF.png"
-                     onClick='putImage(this.id, "img/bDownON.png"); pEnterAddrContent();'
+                     onClick='pEnterAddrContent(this.id, "img/bDownON.png")'
                      onMouseOut='putImage(this.id, "img/bDownOFF.png")'>
             </td>
         </tr>
@@ -277,20 +276,20 @@ DISPLAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
         <tr id="r5" height="57" class="ConR01">
             <td align="center">
                 <img id="idDispRegAddr" src="img/bUpOFF.png"
-                     onClick='putImage(this.id, "img/bUpON.png"); pDispRegAddrContent();'
+                     onClick='pDispRegAddrContent(this.id, "img/bUpON.png")'
                      onMouseOut='putImage(this.id, "img/bUpOFF.png")'>
                 <img id="idDispAddrPlus1" src="img/bUp+1OFF.png"
-                     onClick='putImage(this.id, "img/bUp+1ON.png"); pDispAddrPlus1();'
+                     onClick='pDispAddrPlus1(this.id, "img/bUp+1ON.png")'
                      onMouseOut='putImage(this.id, "img/bUp+1OFF.png")'>
                 <img id="idDispAddrMinus1" src="img/bUP-1OFF.png"
-                     onClick='putImage(this.id, "img/bUp-1ON.png"); pDispAddrMinus1();'
+                     onClick='pDispAddrMinus1(this.id, "img/bUp-1ON.png")'
                      onMouseOut='putImage(this.id, "img/bUp-1OFF.png")'>
                 <img id="idEnterRegAddr" src="img/bDownOFF.png"
-                     onClick='putImage(this.id, "img/bDownON.png"); pEnterRegAddr();'
+                     onClick='pEnterRegAddr(this.id, "img/bDownON.png")'
                      onMouseOut='putImage(this.id, "img/bDownOFF.png")'>
             </td>
         </tr>
-        <tr id="r6" height="49" class="ConR02">
+        <tr id="r6" height="51" class="ConR02">
             <td class="bottom" align="center">
                 Sense Switches
             </td>
@@ -338,40 +337,40 @@ DISPLAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
             <td width="150">
                 <div id="revision" class="FOOTER"></div>
             </td>
-            <th align="center" width="150">
+            <th align="center" width="150" style="background-color:yellow;">
                 Octal
             </th>
-             <th align="center" width="150">
+             <th align="center" width="150" style="background-color:lightgray;">
                  Decimal
              </th>
          </tr>
 
          <tr>
-             <th align="center">Contents</th>
-             <td align="right">
+             <th align="center" style="background-color:lightgray;">Contents</th>
+             <td align="right" style="background-color:yellow;">
                  <div id="ContentsOctalValue">0</div>
              </td>
-             <td align="right">
+             <td align="right" style="background-color:lightgray;">
                  <div id="ContentsDecimalValue">0</div>
              </td>
          </tr>
 
          <tr>
-             <th align="center">Address</th>
-             <td align="right">
+             <th align="center" style="background-color:lightgray;">Address</th>
+             <td align="right" style="background-color:yellow;">
                  <div id="AddressOctalValue">0</div>
              </td>
-             <td align="right">
+             <td align="right" style="background-color:lightgray;">
                  <div id="AddressDecimalValue">0</div>
              </td>
          </tr>
 
          <tr>
-             <th align="center">Control</th>
-             <td align="right">
+             <th align="center" style="background-color:lightgray;">Control</th>
+             <td align="right" style="background-color:yellow;">
                  <div id="ControlOctalValue">0</div>
              </td>
-             <td align="right">
+             <td align="right" style="background-color:lightgray;">
                  <div id="ControlDecimalValue">0</div>
              </td>
          </tr>
